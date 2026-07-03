@@ -1,0 +1,6 @@
+{
+  "name": "Comprarcasa SuHogar Sevilla - Landing Inmobiliaria",
+  "description": "Landing page de lujo para captación de clientes de propiedades exclusivas en Sevilla.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

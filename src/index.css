@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@theme {
+  --font-serif: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", SFMono-Regular, monospace;
+  
+  --color-luxury-black: #0a0e14;      /* Deep black / slate from design */
+  --color-luxury-navy: #0e141f;       /* Dark luxury navy */
+  --color-luxury-dark: #141c2b;       /* Dark intermediate */
+  --color-luxury-cream: #f5f2ed;      /* Exact premium light cream/sand background from design */
+  --color-luxury-sand: #e6dfd5;       /* Slightly deeper sand for alternating sections */
+  --color-luxury-gold: #c5a059;       /* Exact luxury gold from design */
+  --color-luxury-gold-hover: #b38f4d; /* Exact gold hover from design */
+}
+
+/* Estilo para ajustar Leaflet markers y controles al estilo de lujo */
+.leaflet-container {
+  font-family: var(--font-sans);
+  z-index: 10;
+}
+
+.leaflet-bar {
+  border: 1px solid #c5a059 !important;
+  box-shadow: none !important;
+  border-radius: 4px !important;
+  overflow: hidden;
+}
+
+.leaflet-bar a {
+  background-color: #141c2b !important;
+  color: #c5a059 !important;
+  border-bottom: 1px solid #c5a059 !important;
+  transition: all 0.2s ease;
+}
+
+.leaflet-bar a:hover {
+  background-color: #c5a059 !important;
+  color: #07090e !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #0d131f !important;
+  color: #faf7f2 !important;
+  border: 1px solid #c5a059 !important;
+  border-radius: 8px !important;
+}
+
+.leaflet-popup-tip {
+  background: #0d131f !important;
+  border-left: 1px solid #c5a059 !important;
+  border-bottom: 1px solid #c5a059 !important;
+}
+
+/* Ocultar scrollbars pero mantener funcionalidad si se requiere */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
