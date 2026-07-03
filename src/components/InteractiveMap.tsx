@@ -208,10 +208,49 @@ export default function InteractiveMap(_props?: any) {
         .iz-grid { display: grid; grid-template-columns: 0.6fr 1.4fr; gap: 0; width: 100%; max-width: 100%; min-width: 0; align-items: stretch; }
         #iz-map { height: 100%; min-height: 480px; width: 100%; max-width: 100%; background: #EFE9DD; }
         .iz-sidebar { padding: 40px; background: #FFFFFF; border-right: 1px solid rgba(0,0,0,0.08); display: flex; flex-direction: column; min-width: 0; }
-        .iz-tabs { display: flex; gap: 10px; margin-bottom: 30px; overflow-x: auto; padding-bottom: 10px; scrollbar-width: none; min-width: 0; }
-        .iz-tabs::-webkit-scrollbar { display: none; }
-        .iz-tab { padding: 10px 20px; border-radius: 100px; font-size: 10px; font-weight: 800; cursor: pointer; white-space: nowrap; border: 1px solid rgba(0,0,0,0.12); background: #FFFFFF; transition: all 0.3s; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(0,0,0,0.6); }
-        .iz-tab.active { background: #1A1A1A; color: white; border-color: #1A1A1A; box-shadow: none; }
+        .iz-tabs {
+          display: flex;
+          flex-wrap: nowrap;
+          gap: 10px;
+          margin-bottom: 30px;
+          overflow-x: auto;
+          scroll-behavior: smooth;
+          padding-bottom: 12px;
+          min-width: 0;
+        }
+        .iz-tabs::-webkit-scrollbar {
+          height: 4px;
+        }
+        .iz-tabs::-webkit-scrollbar-track {
+          background: rgba(0,0,0,0.05);
+          border-radius: 10px;
+        }
+        .iz-tabs::-webkit-scrollbar-thumb {
+          background: #C5A059;
+          border-radius: 10px;
+        }
+        .iz-tab {
+          padding: 10px 18px;
+          border-radius: 100px;
+          font-size: 10px;
+          font-weight: 800;
+          cursor: pointer;
+          white-space: nowrap;
+          flex-shrink: 0;
+          text-align: center;
+          border: 1px solid rgba(0,0,0,0.12);
+          background: #FFFFFF;
+          transition: all 0.3s;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          color: rgba(0,0,0,0.6);
+        }
+        .iz-tab.active {
+          background: #1A1A1A;
+          color: white;
+          border-color: #1A1A1A;
+          box-shadow: none;
+        }
         .iz-list { display: flex; flex-direction: column; gap: 12px; overflow-y: auto; max-height: 450px; padding-right: 10px; }
         .iz-list::-webkit-scrollbar { width: 4px; }
         .iz-list::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.1); border-radius: 10px; }

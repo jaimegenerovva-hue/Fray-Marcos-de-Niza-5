@@ -147,7 +147,7 @@ export default function MortgageCalculator() {
                 <div className="mc-field-label"><label>Ahorro aportado</label></div>
                 <div className="mc-input-box">
                   <input type="text" id="mc-down-display" value={fmtEUR(downAmount)} readOnly />
-                  <span class="mc-pct-tag" id="mc-down-pct">{downPct}%</span>
+                  <span className="mc-pct-tag" id="mc-down-pct">{downPct}%</span>
                 </div>
                 <input
                   type="range"

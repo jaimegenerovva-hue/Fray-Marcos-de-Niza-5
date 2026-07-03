@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { motion } from 'motion/react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import StatsBar from './components/StatsBar';
@@ -38,6 +39,13 @@ export default function App() {
     }
   };
 
+  const fadeInUp = {
+    initial: { opacity: 0, y: 40 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true, margin: "-100px" },
+    transition: { duration: 0.8, ease: "easeOut" }
+  };
+
   return (
     <div className="min-h-screen bg-luxury-cream text-luxury-navy font-sans antialiased selection:bg-luxury-gold selection:text-luxury-black">
       
@@ -51,16 +59,21 @@ export default function App() {
       <StatsBar />
 
       {/* 4. Intro & Highlights */}
-      <Intro />
+      <motion.div {...fadeInUp}>
+        <Intro />
+      </motion.div>
 
       {/* 5. Photo Gallery & Lightbox */}
-      <Gallery />
+      <motion.div {...fadeInUp}>
+        <Gallery />
+      </motion.div>
 
-      {/* 6. Mortgage Calculator */}
-      <MortgageCalculator />
-
-      {/* 7. Location & Interactive Map (Leaflet) */}
-      <section id="ubicacion" className="bg-luxury-sand py-20 md:py-28 scroll-mt-[100px]">
+      {/* 6. Location & Interactive Map (Leaflet) */}
+      <motion.section 
+        id="ubicacion" 
+        className="bg-luxury-sand py-20 md:py-28 scroll-mt-[100px]"
+        {...fadeInUp}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           {/* Section Header */}
@@ -86,13 +99,22 @@ export default function App() {
           />
 
         </div>
-      </section>
+      </motion.section>
+
+      {/* 7. Mortgage Calculator */}
+      <motion.div {...fadeInUp}>
+        <MortgageCalculator />
+      </motion.div>
 
       {/* 8. Captation Form & Agent Info */}
-      <LeadCaptureForm />
+      <motion.div {...fadeInUp}>
+        <LeadCaptureForm />
+      </motion.div>
 
       {/* 9. Footer */}
-      <Footer />
+      <motion.div {...fadeInUp}>
+        <Footer />
+      </motion.div>
 
       {/* 10. Floating Scroll to Top */}
       <ScrollToTop />

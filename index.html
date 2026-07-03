@@ -6,18 +6,38 @@
     <title>Villa Santa Clara | Comprarcasa SuHogar Sevilla</title>
     
     <!-- SEO & Social Sharing Meta Tags -->
-    <meta name="description" content="Elegante villa clásica independiente y señorial en Santa Clara, Sevilla. Máxima privacidad, amplios jardines y piscina." />
-    <meta property="og:title" content="Villa Santa Clara | Comprarcasa SuHogar Sevilla" />
-    <meta property="og:description" content="Descubra esta magnífica villa independiente en Santa Clara, Sevilla. 331 m² construidos, 747 m² de parcela, diseño clásico señorial y jardines maduros." />
+    <meta name="description" content="Villa señorial de estilo clásico sevillano en Santa Clara: salón con chimenea, suite principal con vestidor, jardín con piscina privada y porche. Un refugio de calma en pleno centro de Sevilla." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://i.ibb.co/3yvvt76w/imagen.jpg" />
+    <meta property="og:title" content="Villa clásica en Santa Clara, Sevilla | Comprarcasa Suhogar Sevilla" />
+    <meta property="og:description" content="Villa señorial de estilo clásico sevillano en Santa Clara: salón con chimenea, suite principal con vestidor, jardín con piscina privada y porche. Un refugio de calma en pleno centro de Sevilla." />
+    <meta property="og:image" content="https://res.cloudinary.com/dbaan8ofb/image/upload/f_auto,q_auto:best,w_1200,h_630,c_fill/v1782990555/ChatGPT_Image_2_jul_2026_12_59_56_gxe6ot.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://fray-marcos-de-niza-5.vercel.app/" />
+    <meta property="og:site_name" content="Comprarcasa Suhogar Sevilla" />
+    <meta property="og:locale" content="es_ES" />
+
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Villa Santa Clara | Comprarcasa SuHogar Sevilla" />
-    <meta name="twitter:description" content="Elegante villa clásica independiente y señorial en Santa Clara, Sevilla con amplios jardines." />
+    <meta name="twitter:title" content="Villa clásica en Santa Clara, Sevilla | Comprarcasa Suhogar Sevilla" />
+    <meta name="twitter:description" content="Villa señorial de estilo clásico sevillano en Santa Clara: salón con chimenea, suite principal con vestidor, jardín con piscina privada y porche. Un refugio de calma en pleno centro de Sevilla." />
+    <meta name="twitter:image" content="https://res.cloudinary.com/dbaan8ofb/image/upload/f_auto,q_auto:best,w_1200,h_630,c_fill/v1782990555/ChatGPT_Image_2_jul_2026_12_59_56_gxe6ot.png" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script src="https://cdn.jsdelivr.net/gh/darkroomengineering/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script>
+      const lenis = new Lenis({
+        duration: 1.1,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothWheel: true,
+      });
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+    </script>
   </body>
 </html>
 
